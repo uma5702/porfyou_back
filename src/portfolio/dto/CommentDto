@@ -1,0 +1,15 @@
+import { ApiProperty } from '@nestjs/swagger';
+
+export class CommentDto {
+  @ApiProperty({ example: 1 })
+  id!: number; // 댓글의 고유 ID
+
+  @ApiProperty({ example: "1" })
+  portfolioId!: number; // 연결된 Portfolio의 ID
+
+  @ApiProperty({ example: 'John Doe' })
+  author!: string; // 댓글 작성자
+
+  @ApiProperty({ example: 'Great portfolio!' })
+  content!: string; // 댓글 내용
+}
