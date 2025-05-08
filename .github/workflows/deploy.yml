@@ -20,7 +20,7 @@ jobs:
 
     - name: Deploy backend to EC2
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@13.54.117.136 << 'EOF'
+        ssh -o StrictHostKeyChecking=no ubuntu@54.253.218.86 << 'EOF'
           set -e
           cd ~/saas-docker/backend || { echo "Backend directory not found"; exit 1; }
           git pull || { echo "Git pull failed"; exit 1; }
