@@ -25,5 +25,5 @@ jobs:
           cd ~/saas-docker/backend || { echo "Backend directory not found"; exit 1; }
           git pull || { echo "Git pull failed"; exit 1; }
           docker-compose -f ../docker-compose.yml build backend || { echo "Docker build failed"; exit 1; }
-          docker-compose -f ../docker-compose.yml restart backend || { echo "Docker restart failed"; exit 1; }
+          docker-compose -f ../docker-compose.yml up -d backend || { echo "Docker restart failed"; exit 1; }
         EOF
